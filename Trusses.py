@@ -75,8 +75,8 @@ abs_err = calAbsoluteError(signed_err)
 print('Absolute Error(s) =', end = ' ')
 print(*abs_err, sep = ', ')
 
-def calRelativeError(abs_err, Av_theoretical):                                                        # For Calculating the Relative Error in the Theoretical and Experimental Readings
-    return list(map(lambda err, theo: abs(err / theo), abs_err, Av_theoretical))
+def calRelativeError(abs_err, theo_forces_readings):                                                  # For Calculating the Relative Error in the Theoretical and Experimental Readings
+    return list(map(lambda err, theo: abs(err / theo), abs_err, theo_forces_readings))
 
 # Testing-
 rel_err = calRelativeError(abs_err, theo_forces_readings)
